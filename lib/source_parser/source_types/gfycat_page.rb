@@ -1,4 +1,5 @@
 require 'JSON'
+require 'net/http'
 
 class GfycatPage
 
