@@ -1,4 +1,5 @@
 require 'source_parser/version'
+require 'source_parser/source_base'
 
 SOURCE_TYPES_PATH = File.join(File.dirname(__FILE__), 'source_parser', 'source_types', '*.rb')
 Dir[SOURCE_TYPES_PATH].each { |file| require file }

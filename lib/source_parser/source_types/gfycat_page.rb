@@ -1,11 +1,7 @@
 require 'JSON'
 require 'net/http'
 
-class GfycatPage
-
-  def initialize(url)
-    @url = url
-  end
+class GfycatPage < SourceBase
 
   def id
     regex = Regexp.new('([a-z]*$)', Regexp::IGNORECASE)
@@ -19,7 +15,7 @@ class GfycatPage
     res = Net::HTTP.start(uri.host, uri.port) { |http|
       http.request(req)
     }
-
+    # wrap in begin
     JSON.parse(res.body)['gfyItem']['webmUrl']
   end
 
