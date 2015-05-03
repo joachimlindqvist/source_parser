@@ -1,4 +1,7 @@
 require 'source_parser/version'
+
+require 'net/http'
+
 require 'source_parser/source_base'
 
 Dir[File.join(File.dirname(__FILE__), 'source_parser', 'source_types', '*.rb')].each do |file| 

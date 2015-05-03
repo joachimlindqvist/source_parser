@@ -1,6 +1,3 @@
-require 'JSON'
-require 'net/http'
-
 class GfycatPage < SourceBase
 
   def id
