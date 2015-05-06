@@ -2,12 +2,7 @@ class GfycatPage < SourceParser::SourceBase
 
   def id
     regex = Regexp.new('([a-z]*$)', Regexp::IGNORECASE)
-    match = regex.match(@url)
-    puts regex
-    puts match
-    puts @url
-    puts 'heeeeeeeeeeeeeeee'
-    match[0]
+    regex.match(@url)[0]
   end
 
   def fetch

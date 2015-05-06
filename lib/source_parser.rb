@@ -18,9 +18,7 @@ module SourceParser
   ]
 
   def self.from_url(url)
-    puts url
     match = self.find_source_type(url)
-    puts match
     raise NoSourceFound.new("Could not find source for #{url}") unless match
     source = match[:klass].new(url)
     source.get_url
