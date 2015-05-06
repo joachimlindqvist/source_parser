@@ -1,5 +1,3 @@
-class WrongImplementation < Exception; end
-
 class SourceBase
 
   def initialize(url)
