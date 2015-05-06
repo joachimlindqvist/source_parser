@@ -1,3 +1,3 @@
 module SourceParser
-  VERSION = "0.1.9.0001"
+  VERSION = "0.1.9.0002"
 end
