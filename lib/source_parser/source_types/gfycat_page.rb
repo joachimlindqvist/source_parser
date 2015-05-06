@@ -12,8 +12,12 @@ class GfycatPage < SourceBase
     res = Net::HTTP.start(uri.host, uri.port) { |http|
       http.request(req)
     }
-    # wrap in begin
-    JSON.parse(res.body)['gfyItem']['webmUrl']
+    
+    begin
+      JSON.parse(res.body)['gfyItem']['webmUrl']
+    rescue
+      raise CouldNotParseJSON.new
+    end
   end
 
   def get_url
