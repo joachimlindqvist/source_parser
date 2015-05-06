@@ -1,4 +1,5 @@
 require 'source_parser/version'
+require 'source_parser/exceptions'
 
 require 'net/http'
 
@@ -16,6 +17,7 @@ module SourceParser
 
   def self.from_url(url)
     match = self.find_source_type(url)
+    raise NoSourceFound.new("Could not find source for #{url}") unless match
     source = match[:klass].new(url)
     source.get_url
   end
