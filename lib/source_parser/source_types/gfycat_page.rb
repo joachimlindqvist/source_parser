@@ -2,7 +2,11 @@ class GfycatPage < SourceBase
 
   def id
     regex = Regexp.new('([a-z]*$)', Regexp::IGNORECASE)
-    regex.match(@url)[0]
+    match = regex.match(@url)
+    puts regex
+    puts match
+    puts @url
+    match[0]
   end
 
   def fetch
