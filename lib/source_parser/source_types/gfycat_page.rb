@@ -13,12 +13,10 @@ module SourceParser
       res = Net::HTTP.start(uri.host, uri.port) { |http|
         http.request(req)
       }
-      
-      begin
-        JSON.parse(res.body)['gfyItem']['webmUrl']
-      rescue
-        raise SourceParser::CouldNotParseJSON.new
-      end
+
+      JSON.parse(res.body)['gfyItem']['webmUrl']
+    rescue
+      raise SourceParser::CouldNotParseJSON.new
     end
 
     def get_url
