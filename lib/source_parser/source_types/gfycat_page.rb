@@ -1,4 +1,4 @@
-class GfycatPage < SourceBase
+class GfycatPage < SourceParser::SourceBase
 
   def id
     regex = Regexp.new('([a-z]*$)', Regexp::IGNORECASE)
@@ -6,6 +6,7 @@ class GfycatPage < SourceBase
     puts regex
     puts match
     puts @url
+    puts 'heeeeeeeeeeeeeeee'
     match[0]
   end
 
@@ -20,7 +21,7 @@ class GfycatPage < SourceBase
     begin
       JSON.parse(res.body)['gfyItem']['webmUrl']
     rescue
-      raise CouldNotParseJSON.new
+      raise SourceParser::CouldNotParseJSON.new
     end
   end
 

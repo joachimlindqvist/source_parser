@@ -1,4 +1,4 @@
-class SourceBase
+class SourceParser::SourceBase
 
   def initialize(url)
     @url = url

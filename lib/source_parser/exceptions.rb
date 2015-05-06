@@ -1,3 +1,3 @@
-class NoSourceFound < Exception; end
-class WrongImplementation < Exception; end
-class CouldNotParseJSON < Exception; end
+class SourceParser::NoSourceFound < Exception; end
+class SourceParser::WrongImplementation < Exception; end
+class SourceParser::CouldNotParseJSON < Exception; end
