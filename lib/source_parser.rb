@@ -1,5 +1,5 @@
 require 'source_parser/version'
-require 'source_parser/exceptions'
+require 'source_parser/errors'
 
 require 'rubygems'
 require 'net/http'
