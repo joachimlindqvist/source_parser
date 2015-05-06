@@ -1,1 +1,1 @@
-class NoSourceFound; end
+class NoSourceFound < Exception; end

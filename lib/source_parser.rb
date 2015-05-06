@@ -2,6 +2,7 @@ require 'source_parser/version'
 require 'source_parser/exceptions'
 
 require 'net/http'
+require 'json'
 
 require 'source_parser/source_base'
 
